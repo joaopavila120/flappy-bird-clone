@@ -15,11 +15,8 @@ function Barreira(reversa = false) {
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
 
-// const b = new Barreira(true)
-// b.setAltura(200)
-// document.querySelector('[wm-flappy]').appendChild(b.elemento)
-
-function ParDeBarreiras(altura, abertura, x) {
+function ParDeBarreiras(altura, abertura, x) 
+{
     this.elemento = novoElemento('div', 'par-de-barreiras')
 
     // Lembrar que o 'this.' torna a variável pública para fora da função
@@ -43,10 +40,6 @@ function ParDeBarreiras(altura, abertura, x) {
     this.sortearAbertura()
     this.setX(x)
 }
-
-// const b = new ParDeBarreiras(700, 200, 800)
-// document.querySelector('[wm-flappy]').appendChild(b.elemento)
-
 
 function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     this.pares = [
@@ -110,18 +103,6 @@ function Progresso() {
     }
     this.atualizarPontos(0)
 }
-
-// const barreiras = new Barreiras(700, 1200, 200, 400)
-// const passaro = new Passaro(700)
-// const areaDoJogo = document.querySelector('[wm-flappy]')
-
-// areaDoJogo.appendChild(passaro.elemento)
-// areaDoJogo.appendChild(new Progresso().elemento)
-// barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
-// setInterval(() => {
-//     barreiras.animar()
-//     passaro.animar()
-// }, 20)
 
 function estaoSobrepostos(elementoA, elementoB) {
     // getBoundingClientRect = Retangulo do elemento
